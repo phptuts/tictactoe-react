@@ -3,9 +3,9 @@ import Square from "./Square";
 import { GameContext } from "./game.context";
 
 function App() {
-  const { game, dispatch } = useContext(GameContext);
+  const { game, newGame } = useContext(GameContext);
   function onNewGame() {
-    dispatch({ type: "NEW_GAME" });
+    newGame();
   }
   return (
     <>

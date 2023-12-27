@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { GameContext } from "./game.context";
 
 const Square = ({ id }) => {
-  const { game, dispatch } = useContext(GameContext);
+  const { game, sendMove } = useContext(GameContext);
   function onMove() {
-    dispatch({ type: "MOVE", payload: id });
+    sendMove(id);
   }
 
   return (
